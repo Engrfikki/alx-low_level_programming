@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -masm=dialect
+gcc $CFILE -masm=intel
