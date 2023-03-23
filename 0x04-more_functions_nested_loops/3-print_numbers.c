@@ -2,7 +2,7 @@
 
 /**
 *print_numbers - print 0123456789
-* owned by Engrfikki 
+*
 *Return: void
 */
 
