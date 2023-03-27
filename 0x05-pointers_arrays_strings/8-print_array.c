@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_array - prints n element of an array of integers
- * 
+ * Engrfikki code
  * @a: int to check
  * @n: int to check
  * Return: 0 is success
