@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * multiplies two numbers
- * program does not recieve two argument 
- * print Error followed by new line
+ * main - multiplies two numbers.
+ * @argc: argument count
+ * @argv: argument
  * Return: 0
  */
- 
+
 int main(int argc, char **argv)
 {
 	int x, y;
@@ -24,3 +24,4 @@ int main(int argc, char **argv)
 
 	return (0);
 }
+

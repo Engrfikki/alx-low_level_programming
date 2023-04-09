@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * adds positive numbers
- * number contains symbols that are not digits should print Error
- * all numbers can stored in an int
+ * main - adds positive numbers
+ * @argc: number contains symbols that are not digits should print Error
+ * @argv: all numbers can stored in an int
  *
  * Return: 0
  */
@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	{
 		printf("0\n");
 		return (0);
-	
+
 	}
 
 	for (i = 1; argv[i]; i++)
@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 		if (*flag)
 		{
 			printf("Error\n");
-			retutn (1);
+			return (1);
 		}
 		else
 		{
