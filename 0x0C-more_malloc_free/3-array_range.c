@@ -1,25 +1,22 @@
+#include <stdlib.h>
 #include "main.h"
-
 /**
- * _calloc - allocates memory for an array of @nmemb elements of
- * @size bytes each and returns a pointer to the allocated memory.
- *
- * @nmemb: allocate memory for array
- * @size: allocate element of size bytes
- *
- * Return: pointer to the allocated memory.
+ * array_range - creates an array of integers
+ * @min: function parameter
+ * @max: func para
+ * Return: NULL or pointer
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
-{
-	char *a;
-	unsigned int b;
 
-	if (nmemb == 0 || size == 0)
+int *array_range(int min, int max)
+{
+	int *m, i;
+
+	if (min > max)
 		return (NULL);
-	a = malloc(nmemb * size);
-	if (a == NULL)
+	m = malloc((max - min + 1) * sizeof(*m));
+	if (m == NULL)
 		return (NULL);
-	for (b = 0; b < (nmemb * size); b++)
-		a[b] = 0;
-	return (a);
+	for (i = 0; min + i <= max; i++)
+		m[i] = min + i;
+	return (m);
 }
