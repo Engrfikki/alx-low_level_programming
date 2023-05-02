@@ -1,23 +1,20 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * list_len - reviewing the code for pupils at Holberton School.
- * @h: name of the list
- * Return: the number of nodes.
+ * listint_len - returns the number of elements in
+ * a linked list.
+ * @h: head of a list.
+ *
+ * Return: numbers of nodes.
  */
-size_t listint_len(const listint_t *h);
+size_t listint_len(const listint_t *h)
 {
-	int count = 0;
+	size_t nnodes = 0;
 
-	while (h)
-
+	while (h != NULL)
 	{
-		count++;
 		h = h->next;
+		nnodes++;
 	}
-
-	return (count);
+	return (nnodes);
 }
