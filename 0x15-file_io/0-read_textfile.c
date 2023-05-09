@@ -3,15 +3,16 @@
 /**
  * read_textfile - reads a text file and prints the letters
  * @filename: filename.
- * @letters: number of letters printed.
+ * @letters: number of letters to be read.
  *
- * Return: number of letters printed. It fails, returns 0.
+ * Return: number of letters printed. on failure, returns 0.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 
 {
 	int fd;
-	ssize_t nrd, nwr;
+	ssize_t fik, xtun;
+	ssize_t fd;
 	char *buf;
 
 	if (!filename)
@@ -26,12 +27,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!buf)
 		return (0);
 
-	nrd = read(fd, buf, letters);
-	nwr = write(STDOUT_FILENO, buf, nrd);
+	fik = read(fd, buf, letters);
+	xtun = write(STDOUT_FILENO, buf, fik);
 
 	close(fd);
 
 	free(buf);
 
-	return (nwr);
+	return (xtun);
 }
